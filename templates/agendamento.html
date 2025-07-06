@@ -10,20 +10,24 @@
 
 <body>
 
-    <header>
-        <ul>
-            <a href="/">
-                <li><img class="logo" src="./../static/imgs/logo-22.png" alt="logo-barberdev"></li>
-            </a>
-        </ul>
-    </header>
 
-    <section class="titulo-pai-section">
-        <h1>Agendamento <b class="barber">Barber</b><b class="dev">Dev</h1>
-    </section>
+
+
     <main>
+
+        <header>
+            <ul>
+                <a class="home-img-a" href="./index.html">
+                    <li><img class="logo" src="./../static/imgs/logo-22.png" alt="logo-barberdev"></li>
+                </a>
+            </ul>
+        </header>
+
         <section class="inputs-pai-section">
-            <form action="/agendar" method="post">
+            <div class="pai-txt">
+                <h1>Agendamento <b class="barber">Barber</b><b class="dev">Dev</h1>
+            </div>
+            <form action="./agendamento-concluido.html" id="form-agendamento">
                 <label for="nome">Nome completo</label>
                 <input id="nome" name="nome" type="text" placeholder="Digite seu nome" required>
 
@@ -51,15 +55,41 @@
                     <option value="19:00">19:00</option>
 
                 </select>
+                <label for="barbeiro">Selecione um porfissional</label>
+                <select name="barbeiro" id="barbeiro">
+                    <option value="barbeiro1">Francisco Almeida</option>
+                    <option value="barbeiro2">Victor Silva</option>
+                    <option value="barbeiro3">Fabío Brandão</option>
+                </select>
                 <div class="pai-btn">
-                    <a href="/concluido"><button type="submit">Agendar horário</button></a>
+                    <button type="submit">Agendar horário</button>
                 </div>
+
 
 
             </form>
 
         </section>
     </main>
+
+    <script>
+  const form = document.getElementById('form-agendamento');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Impede envio padrão
+
+    const formData = new FormData(form);
+    const dados = new URLSearchParams();
+
+    for (const [key, value] of formData.entries()) {
+      dados.append(key, value);
+    }
+
+    // Redireciona para revisar.html com os dados na URL
+    window.location.href = `./revisar.html?${dados.toString()}`;
+  });
+</script>
+
 
 </body>
 

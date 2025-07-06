@@ -15,15 +15,18 @@
     <section class="secao-debaixo-de-cabecalho-section">
         <nav>
             <ul class="logo-pai-ul">
-                <li><img class="logo" src="./../static/imgs/logo-1.png" alt="Pagina-Inicial"></li>
+                <li><img class="logo" src="./../static/imgs/logo-3.png" alt="Pagina-Inicial"></li>
             </ul>
 
-            <ul class="cabecalho-info-ul">
-                <li>Sobre</li>
-                <li>Serviços</li>
-                <li>Quem somos</li>
-                <li>Contatos</li>
+            <div class="menu-mobile-btn" onclick="toggleMenu()">☰</div>
+
+            <ul class="cabecalho-info-ul" id="menuMobile">
+                <li><a class="a-cabecalho" href="#sobre">Sobre</a></li>
+                <li><a class="a-cabecalho" href="#servicos">Serviços</a></li>
+                <li><a class="a-cabecalho" href="#equipe">Quem somos</a></li>
+                <li><a class="a-cabecalho"  href="#contato">Contatos</a></li>
             </ul>
+
 
             <ul class="agendar-horario-pai">
                 <a class="agendar-horario-link" href="./agendamento.html">Agendar horário</a>
@@ -179,6 +182,14 @@
                     class="direito-b">Senai ES</b>.</p>
         </div>
     </footer>
+<!-- SCRIPIT RESPONSIVO -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menuMobile");
+            menu.classList.toggle("active");
+        }
+    </script>
+
 </body>
 
 </html>

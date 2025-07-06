@@ -3,7 +3,7 @@
 
 /* PERMANECER PADRÕES */
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 14px;
 }
 
@@ -13,7 +13,7 @@
 
 ::-webkit-scrollbar-thumb {
     background-color: white;
-    border:1px solid #000;
+    border: 1px solid #000;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -26,7 +26,15 @@ a,
 b,
 img {
     cursor: pointer;
+ 
 }
+
+.a-cabecalho {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
 
 h1,
 h2,
@@ -59,6 +67,7 @@ nav {
     top: 0;
     width: 100%;
     z-index: 10;
+    height: 13vh;
 }
 
 
@@ -86,7 +95,7 @@ ul {
 }
 
 li {
-    color: #fff;
+    color: #fff !important;
     font-weight: 300;
     font-size: 23px;
     text-shadow: 3px 1px 3px #000000;
@@ -468,6 +477,11 @@ input {
     font-weight: bold;
 }
 
+input:focus {
+    outline: none;
+    border: 2px solid #444;
+}
+
 button {
     padding: 12px;
     background-color: #333;
@@ -479,6 +493,8 @@ button {
     font-family: system-ui;
     margin-top: 10px;
 }
+
+
 
 .direitos-reservados-pai {
     margin-top: 20px;
@@ -514,4 +530,179 @@ button {
 
 .zap-img {
     width: 60px;
+}
+
+
+.menu-mobile-btn {
+    display: none;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    z-index: 20;
+    cursor: pointer;
+}
+
+
+
+/* ===================== RESPONSIVO PARA TABLET ===================== */
+@media (max-width: 992px) {
+    .sobre-pai-section {
+        flex-direction: column;
+        gap: 60px;
+        margin-top: 150px;
+        text-align: center;
+    }
+
+    .img-sobre {
+        width: 90%;
+    }
+
+    .pai-sobre-txt {
+        align-items: center;
+        max-width: 90%;
+    }
+
+    .servicos-cortes-pai {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .pai-barbeiros-todos-os-barbeiros-div {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .rodape-sobre-nos-pai {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        text-align: center;
+    }
+
+    .informacoes-rodape-sobre-nos,
+    .informacoes-rodape-sobre-nos-fique-por-dentro {
+        width: 100%;
+    }
+}
+
+/* ===================== RESPONSIVO PARA CELULAR ===================== */
+@media (max-width: 576px) {
+    .titulo-encima-da-foto-h2 {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+
+    .paragrafo-encima-da-foto-p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .agendar-horario-link,
+    .agendar-horario-link-section {
+        font-size: 13px;
+        padding: 8px;
+        width: auto;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .cabecalho-info-ul {
+        flex-direction: column;
+        gap: 10px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: 80px;
+    }
+
+    .sobre-pai-section {
+        margin-top: 100px;
+    }
+
+    .img-sobre {
+        width: 100%;
+    }
+
+    .texto-sobre-p {
+        font-size: 16px;
+    }
+
+    .servicos-cortes-pai {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cortes-img {
+        width: 90%;
+    }
+
+    .titulo-servicos-h1 {
+        font-size: 25px;
+    }
+
+    .nome-do-barbeiro-p {
+        font-size: 18px;
+    }
+
+    .barbeiro-img {
+        width: 80%;
+        height: auto;
+    }
+
+    .rodape-sobre-nos-pai {
+        padding: 30px 10px;
+    }
+
+    .logo-rodape {
+        width: 100px;
+    }
+
+    .direitos-reservados {
+        font-size: 13px;
+    }
+
+    .zap-img {
+        width: 50px;
+    }
+}
+
+/* Apenas no celular */
+@media (max-width: 768px) {
+    .menu-mobile-btn {
+        display: block;
+    }
+
+    .cabecalho-info-ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 15;
+    }
+
+    .cabecalho-info-ul li {
+        font-size: 18px;
+        text-align: right;
+    }
+
+    .cabecalho-info-ul.active {
+        display: flex;
+        padding: 10px;
+        width: 23%;
+        border: none;
+        backdrop-filter: blur(5px);
+        background: #ffffff1f;
+    }
 }
