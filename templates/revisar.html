@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Revisar Agendamento | Barber Dev</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 350px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .info {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        .info p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+        .buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #f5a623;
+            color: #333;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .buttons a:hover {
+            background-color: #d88e10;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='imgs/logo-22.png') }}" alt="Barber Dev" width="100" />
+        <h1>Revisar Agendamento</h1>
+        <div class="info">
+            <p><strong>Nome:</strong> {{ agendamento.nome }}</p>
+            <p><strong>Data:</strong> {{ agendamento.data.strftime('%d/%m/%Y') }}</p>
+            <p><strong>Horário:</strong> {{ agendamento.horario }}</p>
+            <p><strong>Unidade:</strong> {{ agendamento.unidade }}</p>
+        </div>
+        <div class="buttons">
+            <a href="/">Voltar</a>
+            <a href="/agendamento">Revisar outro agendamento</a>
+        </div>
+    </div>
+</body>
+</html>
