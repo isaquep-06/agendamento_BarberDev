@@ -1,0 +1,482 @@
+/* IMPORTANDO FONTE */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* PERMANECER PADRÕES */
+button,
+a,
+img {
+    cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #333;
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+
+ul {
+    width: 100%;
+    list-style-type: none;
+}
+
+.logo-pai-ul {
+    position: relative;
+    display: flex;
+    left: 30px;
+}
+
+.logo {
+    width: 170px;
+}
+
+.cabecalho-info-ul {
+    position: relative;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+li {
+    color: #fff;
+    font-weight: 300;
+    font-size: 23px;
+    text-shadow: 3px 1px 3px #000000;
+}
+
+.agendar-horario-pai {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    right: 70px;
+}
+
+.agendar-horario-link {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #d89911;
+    color: #333;
+}
+
+.secao-debaixo-de-cabecalho-section {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./../static/imgs/foto-principal.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+
+
+.texto-encima-da-foto-pai {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    z-index: 5;
+}
+
+
+
+.titulo-section-h2-pai {
+    position: relative;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.titulo-encima-da-foto-h2 {
+    max-width: 1150px;
+    text-align: center;
+    font-family: serif;
+    font-size: 55px;
+    color: white;
+    font-weight: 100;
+    text-shadow: 2px 2px 2px #333;
+}
+
+.pai-sobre-section-foto-principal {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.paragrafo-encima-da-foto-p {
+    color: #fff;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.agendar-horario-link-section {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #d89911;
+    color: #333;
+    width: 150px;
+}
+
+
+/* SOBRE //////// */
+.sobre-pai-section {
+    margin-top: 270px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 300px;
+}
+
+.img-sobre {
+    width: 800px;
+}
+
+.pai-sobre-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 450px;
+}
+
+.titulo-sobre-h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+
+.texto-sobre-p {
+    margin-top: 15px;
+    color: silver;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: justify;
+}
+
+b {
+    color: white;
+    margin-top: 20px;
+}
+
+/* SERVIÇOS //////////// */
+
+.servicos-section-pai {
+    background-color: #fff;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+.texto-servicos-pai {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.titulo-servicos-h1 {
+    color: #333;
+    font-size: 35px;
+    text-shadow: 3px 1px 3px #00000025;
+}
+
+.texto-servicos-p {
+    max-width: 750px;
+    text-align: center;
+    line-height: 40px;
+    text-shadow: 3px 1px 3px #0000001b;
+}
+
+.servicos-cortes-pai {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 70px;
+}
+
+.pai-img-corte {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #33333340;
+}
+
+.cortes-img {
+    width: 340px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #3333335e;
+}
+
+.texto-corte-pai {
+    display: flex;
+    align-items: center;
+}
+
+.titulo-do-corte-img-p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.preco-do-corte-button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+    font-family: system-ui;
+}
+
+.pai-p-sobre {
+    display: flex;
+    justify-content: start;
+    width: 350%;
+}
+
+.pai-button-sobre {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+
+/* EQUIPE DE BARBEIROS ///////////// */
+
+.barbeiros-pai-section {
+    background-color: #0D121E;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+
+.pai-barbeiro-antes-do-section {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo-pai-barbeiro-section-h1 {
+    display: flex;
+    align-items: center;
+}
+
+.titulo-section-barbeiro {
+    color: #252347;
+    font-size: 45px;
+    margin: 7px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.pai-barbeiros-todos-os-barbeiros-div {
+    display: flex;
+    gap: 100px;
+}
+
+.perfil-do-barbeiro-pai {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.barbeiro-img {
+    width: 280px;
+    height: 310px;
+    border-radius: 7px;
+    z-index: 2;
+    margin-top: 100px;
+}
+
+
+.nome-do-barbeiro-p {
+    margin-top: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 21px;
+    text-align: center;
+}
+
+.rede-social-barbeiro-pai {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.rede-social-barbeiro-img {
+    width: 25px;
+    margin-top: 20px;
+    border-radius: 50px;
+}
+
+.zap-pai {
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    z-index: 100;
+    left: 4px;
+    right: 15px;
+    bottom: 20px;
+
+}
+
+.zap-img {
+    width: 60px;
+}
+
+/* RODAPE /////////////// */
+
+
+.fundo-rodape-pai {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.rodape-pai {
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0d121ee8;
+}
+
+.informacoes-rodape-sobre-nos {
+    width: 40%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.informacoes-rodape-sobre-nos-fique-por-dentro {
+    width: 40%;
+}
+
+.logo-rodape {
+    width: 150px;
+    margin: 20px;
+}
+
+.logo-rodape-pai {
+    display: flex;
+    flex-direction: column;
+}
+
+.rodape-sobre-nos-pai {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 70px;
+}
+
+.logo-rodape-sobre-nos-p {
+    max-width: 450px;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: sans-serif;
+    color: #d8dadc;
+}
+
+.subtitulos-sobre-nos-rodape-p-dados {
+    font-size: 17px;
+    font-weight: 500;
+    font-family: sans-serif;
+    color: #d8dadc;
+}
+
+.titulo-sobre-nos-h2 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.rodape-rede-social-pai {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.redes-sociais-img {
+    width: 30px;
+    border-radius: 10px;
+}
+
+
+.subtitulos-sobre-nos-rodape-p-fique-por-dentro {
+    max-width: 350px;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: sans-serif;
+    color: #d8dadc;
+}
+
+input {
+    padding: 12px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+button {
+    padding: 12px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #dfe3e6;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: system-ui;
+    margin-top: 10px;
+}
+
+.direitos-reservados-pai {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #d8dadc;
+
+}
+
+.direitos-reservados {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    font-family: system-ui;
+}
+
+.direito-b {
+    text-decoration: none;
+    color: #1a92dc;
+    font-weight: 500;
+}

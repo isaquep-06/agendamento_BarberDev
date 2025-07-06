@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar - BarberDev</title>
+    <link rel="stylesheet" href="./../static/agendamento.css">
+</head>
+
+<body>
+    <main>
+        <section class="inputs-pai-section">
+            <label for="nome">Nome completo</label>
+            <input id="nome" type="text" placeholder="Digite seu nome" required>
+
+            <label for="data">Selecione a data</label>
+            <input type="date" required name="data" id="data">
+
+            <label for="unidade">Selecione uma unidade</label>
+            <select name="unidade" id="unidade-select" required>
+                <option value="carapebus">Maruípe, Vitória-Es</option>
+                <option value="Bicanga">Terra vermelha, Vila Velha-Es</option>
+                <option value="morada-de-laranjeias">Morada de laranjeiras, Serra-Es</option>
+            </select>
+
+            <label for="horario">Selecione um horário disponível</label>
+            <select name="horario" id="horario-select">
+                <!-- Horários disponíveis -->
+                <option value="08:00">08:00</option>
+                <option value="08:30">08:30</option>
+                <option value="09:00">09:00</option>
+                <option value="09:30">09:30</option>
+                <option value="10:00">10:00</option>
+                <option value="10:30">10:30</option>
+                <option value="11:00">11:00</option>
+                <option value="11:30">11:30</option>
+                <option value="14:00">14:00</option>
+                <option value="14:30">14:30</option>
+                <option value="15:00">15:00</option>
+                <option value="15:30">15:30</option>
+                <option value="16:00">16:00</option>
+                <option value="16:30">16:30</option>
+                <option value="17:00">17:00</option>
+                <option value="17:30">17:30</option>
+                <option value="18:00">18:00</option>
+                <option value="18:30">18:30</option>
+                <option value="19:00">19:00</option>
+            </select>
+            <div class="pai-button">
+                <button onclick="enviarDados">Agendar horário</button>
+
+            </div>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
