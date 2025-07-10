@@ -1,0 +1,708 @@
+/* IMPORTANDO FONTE */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* PERMANECER PADRÕES */
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border: 1px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #11073b;
+}
+
+
+button,
+a,
+b,
+img {
+    cursor: pointer;
+ 
+}
+
+.a-cabecalho {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+
+h1,
+h2,
+.titulo-section-barbeiro,
+.titulo-sobre-h1,
+.titulo-servicos-h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #333;
+    font-family: "Poppins", sans-serif;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    height: 13vh;
+}
+
+
+ul {
+    width: 100%;
+    list-style-type: none;
+}
+
+.logo-pai-ul {
+    position: relative;
+    display: flex;
+    left: 30px;
+}
+
+.logo {
+    width: 170px;
+}
+
+.cabecalho-info-ul {
+    position: relative;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+li {
+    color: #fff !important;
+    font-weight: 300;
+    font-size: 23px;
+    text-shadow: 3px 1px 3px #000000;
+}
+
+.agendar-horario-pai {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    right: 70px;
+}
+
+.agendar-horario-link {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #d89911;
+    color: #333;
+}
+
+.secao-debaixo-de-cabecalho-section {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./../static/imgs/foto-principal.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+
+
+.texto-encima-da-foto-pai {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    z-index: 5;
+}
+
+
+
+.titulo-section-h2-pai {
+    position: relative;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.titulo-encima-da-foto-h2 {
+    letter-spacing: 20px;
+    max-width: 1150px;
+    text-align: center;
+    font-size: 55px;
+    color: white;
+    font-weight: 100;
+    text-shadow: 2px 2px 2px #333;
+}
+
+.pai-sobre-section-foto-principal {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.paragrafo-encima-da-foto-p {
+    color: #fff;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.agendar-horario-link-section {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #d89911;
+    color: #333;
+    width: 150px;
+}
+
+
+/* SOBRE //////// */
+.sobre-pai-section {
+    margin-top: 270px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 300px;
+}
+
+.img-sobre {
+    width: 800px;
+}
+
+.pai-sobre-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 450px;
+}
+
+.titulo-sobre-h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+
+.texto-sobre-p {
+    margin-top: 15px;
+    color: silver;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: justify;
+}
+
+b {
+    color: white;
+    margin-top: 20px;
+}
+
+/* SERVIÇOS //////////// */
+
+.servicos-section-pai {
+    background-color: #fff;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+.texto-servicos-pai {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.titulo-servicos-h1 {
+    color: #333;
+    font-size: 35px;
+    text-shadow: 3px 1px 3px #00000025;
+}
+
+.texto-servicos-p {
+    max-width: 750px;
+    text-align: center;
+    line-height: 40px;
+    text-shadow: 3px 1px 3px #0000001b;
+}
+
+.servicos-cortes-pai {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 70px;
+}
+
+.pai-img-corte {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #33333340;
+}
+
+.cortes-img {
+    width: 340px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #3333335e;
+}
+
+.texto-corte-pai {
+    display: flex;
+    align-items: center;
+}
+
+.titulo-do-corte-img-p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.preco-do-corte-button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+    font-family: system-ui;
+}
+
+.pai-p-sobre {
+    display: flex;
+    justify-content: start;
+    width: 350%;
+}
+
+.pai-button-sobre {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+
+/* EQUIPE DE BARBEIROS ///////////// */
+
+.barbeiros-pai-section {
+    background-color: #0D121E;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+
+.pai-barbeiro-antes-do-section {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo-pai-barbeiro-section-h1 {
+    display: flex;
+    align-items: center;
+}
+
+.titulo-section-barbeiro {
+    color: #252347;
+    font-size: 45px;
+    margin: 7px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.pai-barbeiros-todos-os-barbeiros-div {
+    display: flex;
+    gap: 100px;
+}
+
+.perfil-do-barbeiro-pai {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.barbeiro-img {
+    width: 280px;
+    height: 310px;
+    border-radius: 7px;
+    z-index: 2;
+    margin-top: 100px;
+}
+
+
+.nome-do-barbeiro-p {
+    margin-top: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 21px;
+    text-align: center;
+}
+
+.rede-social-barbeiro-pai {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.rede-social-barbeiro-img {
+    width: 25px;
+    margin-top: 20px;
+    border-radius: 50px;
+}
+
+
+
+/* RODAPE /////////////// */
+
+
+.fundo-rodape-pai {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.rodape-pai {
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0d121ee8;
+}
+
+.informacoes-rodape-sobre-nos {
+    width: 40%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.informacoes-rodape-sobre-nos-fique-por-dentro {
+    width: 40%;
+}
+
+.logo-rodape {
+    width: 150px;
+    margin: 20px;
+}
+
+.logo-rodape-pai {
+    display: flex;
+    flex-direction: column;
+}
+
+.rodape-sobre-nos-pai {
+    display: flex;
+    align-items: baseline;
+    gap: 30px;
+    padding: 70px;
+}
+
+.logo-rodape-sobre-nos-p {
+    max-width: 450px;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: sans-serif;
+    color: #d8dadc;
+}
+
+.subtitulos-sobre-nos-rodape-p-dados {
+    font-size: 17px;
+    font-weight: 500;
+    font-family: sans-serif;
+    color: #d8dadc;
+}
+
+.titulo-sobre-nos-h2 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.rodape-rede-social-pai {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.redes-sociais-img {
+    width: 30px;
+    border-radius: 10px;
+}
+
+
+.subtitulos-sobre-nos-rodape-p-fique-por-dentro {
+    max-width: 450px;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: sans-serif;
+    color: #d8dadc;
+}
+
+input {
+    padding: 12px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #444;
+}
+
+button {
+    padding: 12px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #dfe3e6;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: system-ui;
+    margin-top: 10px;
+}
+
+
+
+.direitos-reservados-pai {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #d8dadc;
+
+}
+
+.direitos-reservados {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    font-family: system-ui;
+}
+
+.direito-b {
+    text-decoration: none;
+    color: #1a92dc;
+    font-weight: 500;
+}
+
+
+/* ZAP ZAP */
+
+.zap-pai {
+    position: fixed;
+    z-index: 100;
+    right: 15px;
+    bottom: 20px;
+
+}
+
+.zap-img {
+    width: 60px;
+}
+
+
+.menu-mobile-btn {
+    display: none;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    z-index: 20;
+    cursor: pointer;
+}
+
+
+
+/* ===================== RESPONSIVO PARA TABLET ===================== */
+@media (max-width: 992px) {
+    .sobre-pai-section {
+        flex-direction: column;
+        gap: 60px;
+        margin-top: 150px;
+        text-align: center;
+    }
+
+    .img-sobre {
+        width: 90%;
+    }
+
+    .pai-sobre-txt {
+        align-items: center;
+        max-width: 90%;
+    }
+
+    .servicos-cortes-pai {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .pai-barbeiros-todos-os-barbeiros-div {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .rodape-sobre-nos-pai {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        text-align: center;
+    }
+
+    .informacoes-rodape-sobre-nos,
+    .informacoes-rodape-sobre-nos-fique-por-dentro {
+        width: 100%;
+    }
+}
+
+/* ===================== RESPONSIVO PARA CELULAR ===================== */
+@media (max-width: 576px) {
+    .titulo-encima-da-foto-h2 {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+
+    .paragrafo-encima-da-foto-p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .agendar-horario-link,
+    .agendar-horario-link-section {
+        font-size: 13px;
+        padding: 8px;
+        width: auto;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .cabecalho-info-ul {
+        flex-direction: column;
+        gap: 10px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: 80px;
+    }
+
+    .sobre-pai-section {
+        margin-top: 100px;
+    }
+
+    .img-sobre {
+        width: 100%;
+    }
+
+    .texto-sobre-p {
+        font-size: 16px;
+    }
+
+    .servicos-cortes-pai {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cortes-img {
+        width: 90%;
+    }
+
+    .titulo-servicos-h1 {
+        font-size: 25px;
+    }
+
+    .nome-do-barbeiro-p {
+        font-size: 18px;
+    }
+
+    .barbeiro-img {
+        width: 80%;
+        height: auto;
+    }
+
+    .rodape-sobre-nos-pai {
+        padding: 30px 10px;
+    }
+
+    .logo-rodape {
+        width: 100px;
+    }
+
+    .direitos-reservados {
+        font-size: 13px;
+    }
+
+    .zap-img {
+        width: 50px;
+    }
+}
+
+/* Apenas no celular */
+@media (max-width: 768px) {
+    .menu-mobile-btn {
+        display: block;
+    }
+
+    .cabecalho-info-ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 15;
+    }
+
+    .cabecalho-info-ul li {
+        font-size: 18px;
+        text-align: right;
+    }
+
+    .cabecalho-info-ul.active {
+        display: flex;
+        padding: 10px;
+        width: 23%;
+        border: none;
+        backdrop-filter: blur(5px);
+        background: #ffffff1f;
+    }
+}

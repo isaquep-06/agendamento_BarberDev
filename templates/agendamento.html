@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar - BarberDev</title>
+    <link rel="stylesheet" href="./../static/agendamento.css">
+</head>
+
+<body>
+
+
+
+
+    <main>
+
+        <header>
+            <ul>
+                <a class="home-img-a" href="./../index.html">
+                    <li><img class="logo" src="./../static/imgs/logo-22.png" alt="logo-barberdev"></li>
+                </a>
+            </ul>
+        </header>
+
+        <section class="inputs-pai-section">
+            <div class="pai-txt">
+                <h1>Agendamento <b class="barber">Barber</b><b class="dev">Dev</h1>
+            </div>
+            <form action="./agendamento-concluido.html" id="form-agendamento">
+                <label for="nome">Nome completo</label>
+                <input id="nome" name="nome" type="text" placeholder="Digite seu nome" required>
+
+                <label for="data">Selecione a data</label>
+                <input type="date" name="data" required>
+
+                <label for="unidade">Selecione uma unidade</label>
+                <select name="unidade" required>
+                    <option value="Maruípe">Maruípe, Vitória-ES</option>
+                    <option value="Terra Vermelha">Terra Vermelha, Vila Velha-ES</option>
+                    <option value="Morada de Laranjeiras">Morada de Laranjeiras, Serra-ES</option>
+                </select>
+
+                <label for="horario">Selecione um horário disponível</label>
+                <select name="horario" required>
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+
+                </select>
+                <label for="barbeiro">Selecione um porfissional</label>
+                <select name="barbeiro" id="barbeiro">
+                    <option value="barbeiro1">Francisco Almeida</option>
+                    <option value="barbeiro2">Victor Silva</option>
+                    <option value="barbeiro3">Fabío Brandão</option>
+                </select>
+                <div class="pai-btn">
+                    <button class="" type="submit">Agendar horário</button>
+                </div>
+
+
+
+            </form>
+
+        </section>
+    </main>
+
+    <script>
+  const form = document.getElementById('form-agendamento');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Impede envio padrão
+
+    const formData = new FormData(form);
+    const dados = new URLSearchParams();
+
+    for (const [key, value] of formData.entries()) {
+      dados.append(key, value);
+    }
+
+    // Redireciona para revisar.html com os dados na URL
+    window.location.href = `./revisar.html?${dados.toString()}`;
+  });
+</script>
+
+
+</body>
+
+</html>

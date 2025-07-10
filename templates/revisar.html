@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Revisar Agendamento | Barber Dev</title>
+  <link rel="stylesheet" href="./../static/revisar.css">
+</head>
+
+<body>
+  <div class="container">
+    <img src="./../static/imgs/logo-3.png" alt="Barber Dev" width="100" />
+    <h1>Revisar Agendamento</h1>
+    <div class="info" id="info">
+      <p><strong>Nome:</strong> <span id="nome">--</span></p>
+      <p><strong>Data:</strong> <span id="data">--</span></p>
+      <p><strong>Horário:</strong> <span id="horario">--</span></p>
+      <p><strong>Unidade:</strong> <span id="unidade">--</span></p>
+      <p><strong>Profissional:</strong> <span id="barbeiro">--</span></p>
+    </div>
+    <div class="buttons">
+      <a href="./../index.html">Voltar</a>
+      <a href="./agendamento-concluido.html">Confirmar agendamento</a>
+    </div>
+  </div>
+
+ <script>
+  function getQueryParams() {
+    const params = {};
+    const queryString = window.location.search.substring(1);
+    const vars = queryString.split('&');
+    vars.forEach(v => {
+      const pair = v.split('=');
+      if (pair[0]) {
+        params[decodeURIComponent(pair[0])] = decodeURIComponent((pair[1] || '').replace(/\+/g, ' '));
+      }
+    });
+    return params;
+  }
+
+  const params = getQueryParams();
+
+  // Se não vierem parâmetros pela URL, tenta carregar do localStorage
+  if (!params.nome) {
+    params.nome = localStorage.getItem('nome');
+    params.data = localStorage.getItem('data');
+    params.horario = localStorage.getItem('horario');
+    params.unidade = localStorage.getItem('unidade');
+    params.barbeiro = localStorage.getItem('barbeiro');
+  } else {
+    // Salva no localStorage para uso futuro (como voltar da tela de concluído)
+    localStorage.setItem('nome', params.nome);
+    localStorage.setItem('data', params.data);
+    localStorage.setItem('horario', params.horario);
+    localStorage.setItem('unidade', params.unidade);
+    localStorage.setItem('barbeiro', params.barbeiro);
+  }
+
+  // Preenche os campos da página
+  if (params.nome) document.getElementById('nome').textContent = params.nome;
+  if (params.data) document.getElementById('data').textContent = params.data;
+  if (params.horario) document.getElementById('horario').textContent = params.horario;
+  if (params.unidade) document.getElementById('unidade').textContent = params.unidade;
+  if (params.barbeiro) document.getElementById('barbeiro').textContent = formatarNomeBarbeiro(params.barbeiro);
+
+  function formatarNomeBarbeiro(valor) {
+    switch (valor) {
+      case 'barbeiro1': return 'Francisco Almeida';
+      case 'barbeiro2': return 'Victor Silva';
+      case 'barbeiro3': return 'Fabío Brandão';
+      default: return valor;
+    }
+  }
+</script>
+
+</body>
+
+</html>

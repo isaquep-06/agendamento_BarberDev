@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    font-family: "Oswald", sans-serif;
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 40px;
+}
+
+ul {
+    list-style: none;
+}
+
+.img-pai {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 13px;
+}
+
+img {
+    width: 150px;
+}
+
+.home-img-a {
+    background-color: transparent;
+}
+
+.home-img-a, img:hover {
+    background-color: transparent;
+}
+
+img:hover {
+    background-color: transparent;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 3px 3px 3px #2b2929;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+.pai-txt {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+h1 {
+    color: #000000;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 300px;
+    text-shadow: 2px 2px 2px silver;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+select, input {
+    margin-bottom: 15px;
+    border: 2px solid #4f3a70;padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+input:hover {
+    border: 2px solid #1db61d;
+}
+
+select:hover {
+    border: 2px solid #1db61d;
+}
+.pai-button {
+    margin-top: 34px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #ffb833;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: system-ui;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+button:hover {
+    background-color: #000;
+    color: white;
+}
+
+a:hover {
+    background-color: #000;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    background: #ffb833;
+    padding: 10px;
+    color: #333;
+    font-weight: bold;
+    font-family: system-ui;
+    border-radius: 5px;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media screen and (max-width: 768px) {
+    section {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .pai-button {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    button,
+    a {
+        width: 100%;
+        text-align: center;
+    }
+
+    img {
+        width: 100px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    section {
+        width: 95%;
+        /* aproveita mais a largura da tela pequena */
+        height: auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+        /* deixa o texto mais legível em telas muito pequenas */
+        max-width: 100%;
+        /* tira limite para caber melhor */
+    }
+
+    button,
+    a {
+        font-size: 16px;
+        /* aumenta um pouco o tamanho do texto do botão */
+        padding: 12px;
+    }
+}
