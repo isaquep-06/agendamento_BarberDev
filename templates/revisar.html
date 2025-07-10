@@ -21,12 +21,14 @@
     </div>
     <div class="buttons">
       <a href="./../index.html">Voltar</a>
-<<<<<<< HEAD
+
       <a href="./agendamento-concluido.html">Confirmar agendamento</a>
     </div>
   </div>
+    </div>
+  </div>
 
- <script>
+  <script>
   function getQueryParams() {
     const params = {};
     const queryString = window.location.search.substring(1);
@@ -42,15 +44,8 @@
 
   const params = getQueryParams();
 
-  // Se não vierem parâmetros pela URL, tenta carregar do localStorage
-  if (!params.nome) {
-    params.nome = localStorage.getItem('nome');
-    params.data = localStorage.getItem('data');
-    params.horario = localStorage.getItem('horario');
-    params.unidade = localStorage.getItem('unidade');
-    params.barbeiro = localStorage.getItem('barbeiro');
-  } else {
-    // Salva no localStorage para uso futuro (como voltar da tela de concluído)
+  // Se vierem parâmetros pela URL, salvar no localStorage
+  if (params.nome) {
     localStorage.setItem('nome', params.nome);
     localStorage.setItem('data', params.data);
     localStorage.setItem('horario', params.horario);
@@ -58,12 +53,18 @@
     localStorage.setItem('barbeiro', params.barbeiro);
   }
 
-  // Preenche os campos da página
-  if (params.nome) document.getElementById('nome').textContent = params.nome;
-  if (params.data) document.getElementById('data').textContent = params.data;
-  if (params.horario) document.getElementById('horario').textContent = params.horario;
-  if (params.unidade) document.getElementById('unidade').textContent = params.unidade;
-  if (params.barbeiro) document.getElementById('barbeiro').textContent = formatarNomeBarbeiro(params.barbeiro);
+  // Recuperar os dados do localStorage caso não venham pela URL
+  const nome = params.nome || localStorage.getItem('nome') || '--';
+  const data = params.data || localStorage.getItem('data') || '--';
+  const horario = params.horario || localStorage.getItem('horario') || '--';
+  const unidade = params.unidade || localStorage.getItem('unidade') || '--';
+  const barbeiro = params.barbeiro || localStorage.getItem('barbeiro') || '--';
+
+  document.getElementById('nome').textContent = nome;
+  document.getElementById('data').textContent = data;
+  document.getElementById('horario').textContent = horario;
+  document.getElementById('unidade').textContent = unidade;
+  document.getElementById('barbeiro').textContent = formatarNomeBarbeiro(barbeiro);
 
   function formatarNomeBarbeiro(valor) {
     switch (valor) {
@@ -75,45 +76,7 @@
   }
 </script>
 
-=======
-      <a href="./agendamento.html">Revisar outro agendamento</a>
-    </div>
-  </div>
 
-  <script>
-    function getQueryParams() {
-      const params = {};
-      const queryString = window.location.search.substring(1);
-      const vars = queryString.split('&');
-      vars.forEach(v => {
-        const pair = v.split('=');
-        if (pair[0]) {
-          // Substitui '+' por espaço antes de decodificar
-          params[decodeURIComponent(pair[0])] = decodeURIComponent((pair[1] || '').replace(/\+/g, ' '));
-        }
-      });
-      return params;
-    }
-
-    const params = getQueryParams();
-
-    // Preenche os campos da página
-    if (params.nome) document.getElementById('nome').textContent = params.nome;
-    if (params.data) document.getElementById('data').textContent = params.data;
-    if (params.horario) document.getElementById('horario').textContent = params.horario;
-    if (params.unidade) document.getElementById('unidade').textContent = params.unidade;
-    if (params.barbeiro) document.getElementById('barbeiro').textContent = formatarNomeBarbeiro(params.barbeiro);
-
-    function formatarNomeBarbeiro(valor) {
-      switch (valor) {
-        case 'barbeiro1': return 'Francisco Almeida';
-        case 'barbeiro2': return 'Victor Silva';
-        case 'barbeiro3': return 'Fabío Brandão';
-        default: return valor;
-      }
-    }
-  </script>
->>>>>>> 12c8270b72c4d87e538206eb527e2bf1e736e7d5
 </body>
 
 </html>
