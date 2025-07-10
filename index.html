@@ -24,7 +24,7 @@
                 <li><a class="a-cabecalho" href="#sobre">Sobre</a></li>
                 <li><a class="a-cabecalho" href="#servicos">Serviços</a></li>
                 <li><a class="a-cabecalho" href="#equipe">Nossa equipe</a></li>
-                <li><a class="a-cabecalho"  href="#contato">Contatos</a></li>
+                <li><a class="a-cabecalho" href="#rodape">Contatos</a></li>
             </ul>
 
 
@@ -46,22 +46,27 @@
         </div>
     </section>
 
-    <section class="sobre-pai-section">
+    <section class="sobre-pai-section" id="sobre">
         <div class="img-sobre-pai">
             <img class="img-sobre" src="./static/imgs/foto-principal-sobre.png" alt="sobre-barberdev">
         </div>
         <div class="pai-sobre-txt">
             <h1 class="titulo-sobre-h1">Sobre</h1>
-            <p class="texto-sobre-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quibusdam atque rerum
-                minus animi corporis.</p>
+            <p class="texto-sobre-p">A BarberDev é uma barbearia moderna que une tradição e inovação. Oferecemos cortes
+                personalizados, atendimento de qualidade e um ambiente acolhedor. Nosso compromisso é valorizar cada
+                cliente, proporcionando estilo, confiança e satisfação em cada visita. Aqui, seu visual é nossa
+                inspiração.
+                .</p>
             <b>Horário de funcionamento das 08:00 às 19:00</b>
         </div>
     </section>
 
-    <section class="servicos-section-pai">
+    <section class="servicos-section-pai" id="servicos">
         <div class="texto-servicos-pai">
             <h1 class="titulo-servicos-h1">SERVIÇOS</h1>
-            <p class="texto-servicos-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="texto-servicos-p">Cortes modernos, barba, design, coloração, hidratação e atendimento
+                personalizado para realçar seu estilo único.
+            </p>
         </div>
 
         <div class="servicos-cortes-pai">
@@ -96,9 +101,9 @@
             </div>
         </div>
     </section>
-    <!--    SAKDSJAFHASKFHDSAHFI´DGKIND´GKDFÑKGLNFDGDGDSGDSGDSG -->
+    <!--    SEPARAÇÃO-->
 
-    <section class="barbeiros-pai-section">
+    <section class="barbeiros-pai-section" id="equipe">
         <div class="pai-barbeiro-antes-do-section">
             <div class="titulo-pai-barbeiro-section-h1">
                 <h1 class="titulo-section-barbeiro">NOSSA EQUIPE</h1>
@@ -143,14 +148,16 @@
         <img class="zap-img" src="./static/imgs/whatsapp.png" alt="whatsapp-da-barbearia">
     </div>
 
-    <footer class="rodape-pai">
+    <footer class="rodape-pai" id="rodape">
         <div class="logo-rodape-pai">
             <div class="rodape-sobre-nos-pai">
                 <div class="informacoes-rodape-sobre-nos">
                     <img class="logo-rodape" src="./static/imgs/logo-22.png" alt="logo">
-                    <p class="logo-rodape-sobre-nos-p">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatibus quidem nam ad earum culpa hic vel porro vero temporibus quaerat. Porro quaerat
-                        error dolor praesentium illo, libero tempora eius eligendi!</p>
+                    <p class="logo-rodape-sobre-nos-p">A BarberDev nasceu da paixão por cortes e tecnologia. Fundada por
+                        jovens barbeiros criativos, unimos estilo e inovação para transformar o atendimento em algo
+                        único. Nosso propósito é mais que estética — é experiência. Cada cliente inspira nossa evolução.
+                        Aqui, cada corte carrega propósito, arte e conexão verdadeira.
+                    </p>
                 </div>
                 <div class="informacoes-rodape-sobre-nos">
                     <h2 class="titulo-sobre-nos-h2">SAC - Serviço de Atendimento ao Cliente</h2>
@@ -161,9 +168,10 @@
                 </div>
                 <div class="informacoes-rodape-sobre-nos-fique-por-dentro">
                     <h2 class="titulo-sobre-nos-h2">Fique por dentro</h2>
-                    <p class="subtitulos-sobre-nos-rodape-p-fique-por-dentro">Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Nam asperiores ipsam iusto iure illum ex minima officia consectetur amet,
-                        minus harum quasi perspiciatis quaerat maiores nostrum aperiam id voluptatem qui?
+                    <p class="subtitulos-sobre-nos-rodape-p-fique-por-dentro">Fique por dentro das novidades da
+                        BarberDev! Sempre trazendo as últimas tendências em cortes, cuidados e tecnologia para oferecer
+                        a melhor experiência. Acompanhe lançamentos exclusivos, dicas especiais e promoções imperdíveis.
+                        Não perca nenhuma atualização para estar sempre com estilo e confiança renovados.
                     </p>
                     <input type="text" placeholder="E-mail">
                     <button type="submit">Me inscrever</button>
@@ -182,7 +190,7 @@
                     class="direito-b">Senai ES</b>.</p>
         </div>
     </footer>
-<!-- SCRIPIT RESPONSIVO -->
+    <!-- SCRIPIT RESPONSIVO -->
     <script>
         function toggleMenu() {
             const menu = document.getElementById("menuMobile");

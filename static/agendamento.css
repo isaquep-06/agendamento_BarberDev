@@ -88,6 +88,7 @@ h1 {
     text-shadow: 2px 2px 2px silver;
     margin-top: 10px;
     margin-bottom: 15px;
+    max-width: 350px;
 }
 
 select, input {
@@ -144,6 +145,14 @@ a {
     border-radius: 5px;
 }
 
+
+
+b {
+    color: #232323;
+    font-weight: 700;
+      line-height: 2.3;
+}
+
 /* ========== RESPONSIVIDADE ========== */
 @media screen and (max-width: 768px) {
     section {
@@ -154,6 +163,7 @@ a {
 
     h1 {
         font-size: 24px;
+        max-width: 250px;
     }
 
     .pai-button {
@@ -183,9 +193,10 @@ a {
     }
 
     h1 {
-        font-size: 20px;
+        font-size: 23px;
         /* deixa o texto mais legível em telas muito pequenas */
-        max-width: 100%;
+        max-width: 60%;
+        margin-bottom: 60px;
         /* tira limite para caber melhor */
     }
 

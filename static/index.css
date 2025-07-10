@@ -652,8 +652,13 @@ button {
 
     .texto-sobre-p {
         font-size: 16px;
+        text-align: center;
     }
 
+    b {
+        font-size: 14px;
+        margin: 20px 0;
+    }
     .servicos-cortes-pai {
         flex-direction: column;
         align-items: center;
