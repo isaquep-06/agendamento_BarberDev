@@ -15,68 +15,74 @@
     <div class="info" id="info">
       <p><strong>Nome:</strong> <span id="nome">--</span></p>
       <p><strong>Data:</strong> <span id="data">--</span></p>
-      <p><strong>Horário:</strong> <span id="horario">--</span></p>
+      <p><strong>Corte:</strong> <span id="corte">--</span></p> <!-- Corrigido aqui -->
       <p><strong>Unidade:</strong> <span id="unidade">--</span></p>
       <p><strong>Profissional:</strong> <span id="barbeiro">--</span></p>
     </div>
     <div class="buttons">
       <a href="./../index.html">Voltar</a>
-
       <a href="./agendamento-concluido.html">Confirmar agendamento</a>
-    </div>
-  </div>
     </div>
   </div>
 
   <script>
-  function getQueryParams() {
-    const params = {};
-    const queryString = window.location.search.substring(1);
-    const vars = queryString.split('&');
-    vars.forEach(v => {
-      const pair = v.split('=');
-      if (pair[0]) {
-        params[decodeURIComponent(pair[0])] = decodeURIComponent((pair[1] || '').replace(/\+/g, ' '));
-      }
-    });
-    return params;
-  }
-
-  const params = getQueryParams();
-
-  // Se vierem parâmetros pela URL, salvar no localStorage
-  if (params.nome) {
-    localStorage.setItem('nome', params.nome);
-    localStorage.setItem('data', params.data);
-    localStorage.setItem('horario', params.horario);
-    localStorage.setItem('unidade', params.unidade);
-    localStorage.setItem('barbeiro', params.barbeiro);
-  }
-
-  // Recuperar os dados do localStorage caso não venham pela URL
-  const nome = params.nome || localStorage.getItem('nome') || '--';
-  const data = params.data || localStorage.getItem('data') || '--';
-  const horario = params.horario || localStorage.getItem('horario') || '--';
-  const unidade = params.unidade || localStorage.getItem('unidade') || '--';
-  const barbeiro = params.barbeiro || localStorage.getItem('barbeiro') || '--';
-
-  document.getElementById('nome').textContent = nome;
-  document.getElementById('data').textContent = data;
-  document.getElementById('horario').textContent = horario;
-  document.getElementById('unidade').textContent = unidade;
-  document.getElementById('barbeiro').textContent = formatarNomeBarbeiro(barbeiro);
-
-  function formatarNomeBarbeiro(valor) {
-    switch (valor) {
-      case 'barbeiro1': return 'Francisco Almeida';
-      case 'barbeiro2': return 'Victor Silva';
-      case 'barbeiro3': return 'Fabío Brandão';
-      default: return valor;
+    function getQueryParams() {
+      const params = {};
+      const queryString = window.location.search.substring(1);
+      const vars = queryString.split('&');
+      vars.forEach(v => {
+        const pair = v.split('=');
+        if (pair[0]) {
+          params[decodeURIComponent(pair[0])] = decodeURIComponent((pair[1] || '').replace(/\+/g, ' '));
+        }
+      });
+      return params;
     }
-  }
-</script>
 
+    const params = getQueryParams();
 
+    // Se vierem parâmetros pela URL, salvar no localStorage
+    if (params.nome) {
+      localStorage.setItem('nome', params.nome);
+      localStorage.setItem('data', params.data);
+      localStorage.setItem('corte', params.corte); // ajustado
+      localStorage.setItem('unidade', params.unidade);
+      localStorage.setItem('barbeiro', params.barbeiro);
+    }
+
+    // Recuperar os dados do localStorage caso não venham pela URL
+    const nome = params.nome || localStorage.getItem('nome') || '--';
+    const data = params.data || localStorage.getItem('data') || '--';
+    const corte = params.corte || localStorage.getItem('corte') || '--';
+    const unidade = params.unidade || localStorage.getItem('unidade') || '--';
+    const barbeiro = params.barbeiro || localStorage.getItem('barbeiro') || '--';
+
+    document.getElementById('nome').textContent = nome;
+    document.getElementById('data').textContent = data;
+    document.getElementById('corte').textContent = formatarNomeCorte(corte); // ajustado
+    document.getElementById('unidade').textContent = unidade;
+    document.getElementById('barbeiro').textContent = formatarNomeBarbeiro(barbeiro);
+
+    function formatarNomeBarbeiro(valor) {
+      switch (valor) {
+        case 'barbeiro1': return 'Francisco Almeida';
+        case 'barbeiro2': return 'Victor Silva';
+        case 'barbeiro3': return 'Fabío Brandão';
+        default: return valor;
+      }
+    }
+
+    function formatarNomeCorte(valor) {
+      switch (valor) {
+        case 'degrade': return 'Degradê';
+        case 'social': return 'Social';
+        case 'militar': return 'Militar';
+        case 'moicano': return 'Moicano';
+        case 'risco': return 'Risco com desenho';
+        default: return valor;
+      }
+    }
+  </script>
 </body>
 
 </html>

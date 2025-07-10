@@ -1,6 +1,7 @@
 /* IMPORTANDO FONTE */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
 /* PERMANECER PADRÕES */
 
 ::-webkit-scrollbar {
@@ -26,13 +27,13 @@ a,
 b,
 img {
     cursor: pointer;
- 
+
 }
 
 .a-cabecalho {
     text-decoration: none;
     color: white;
-    font-weight: 700;
+    font-weight: 200;
 }
 
 
@@ -41,7 +42,7 @@ h2,
 .titulo-section-barbeiro,
 .titulo-sobre-h1,
 .titulo-servicos-h1 {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: "Poppins", sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -68,6 +69,7 @@ nav {
     width: 100%;
     z-index: 10;
     height: 13vh;
+    transition: .5s ease-in-out;
 }
 
 
@@ -79,16 +81,18 @@ ul {
 .logo-pai-ul {
     position: relative;
     display: flex;
-    left: 30px;
+    left: 130px;
+    top: 20px;
 }
 
 .logo {
-    width: 170px;
+    width: 130px;
 }
 
 .cabecalho-info-ul {
     position: relative;
     right: 10px;
+    top: 20px;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -96,7 +100,6 @@ ul {
 
 li {
     color: #fff !important;
-    font-weight: 300;
     font-size: 23px;
     text-shadow: 3px 1px 3px #000000;
 }
@@ -106,6 +109,7 @@ li {
     justify-content: end;
     position: relative;
     right: 70px;
+    margin-top: 15px;
 }
 
 .agendar-horario-link {
@@ -116,6 +120,12 @@ li {
     border-radius: 5px;
     background-color: #d89911;
     color: #333;
+    transition: .5s cubic-bezier(1, 0.47, 1, 1);
+}
+
+.agendar-horario-link:hover {
+    background-color: black;
+    color: #ffffff;
 }
 
 .secao-debaixo-de-cabecalho-section {
@@ -178,6 +188,10 @@ li {
     font-size: 17px;
 }
 
+.pai-link {
+    margin: 15px 0;
+}
+
 .agendar-horario-link-section {
     text-decoration: none;
     padding: 10px;
@@ -187,6 +201,12 @@ li {
     background-color: #d89911;
     color: #333;
     width: 150px;
+    transition: .5s ease-in-out;
+}
+
+.agendar-horario-link-section:hover {
+    background-color: black;
+    color: #ffffff;
 }
 
 
@@ -677,6 +697,8 @@ button {
 @media (max-width: 768px) {
     .menu-mobile-btn {
         display: block;
+        position: absolute;
+        top: 37%;
     }
 
     .cabecalho-info-ul {
@@ -704,5 +726,78 @@ button {
         border: none;
         backdrop-filter: blur(5px);
         background: #ffffff1f;
+    }
+
+    .logo-pai-ul {
+        display: flex;
+        left: 30px;
+        top: 10px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+
+    .agendar-horario-pai {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        right: 13%;
+        top: 0;
+    }
+}
+
+@media (max-width: 368px) {
+    .menu-mobile-btn {
+        display: block;
+        position: absolute;
+        top: 37%;
+    }
+
+    .cabecalho-info-ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 15;
+    }
+
+    .cabecalho-info-ul li {
+        font-size: 18px;
+        text-align: right;
+    }
+
+    .cabecalho-info-ul.active {
+        display: flex;
+        padding: 10px;
+        width: 23%;
+        border: none;
+        backdrop-filter: blur(5px);
+        background: #ffffff1f;
+    }
+
+    .logo-pai-ul {
+        display: flex;
+        left: 30px;
+        top: 10px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+
+    .agendar-horario-pai {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        right: 13%;
+        top: 0;
     }
 }

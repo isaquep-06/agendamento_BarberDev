@@ -55,6 +55,17 @@
                     <option value="19:00">19:00</option>
 
                 </select>
+
+                <label for="corte">Selecione um corte</label>
+                <select name="corte" id="corte" required>
+                    <option value="degrade">Degradê</option>
+                    <option value="social">Social</option>
+                    <option value="militar">Militar</option>
+                    <option value="moicano">Moicano</option>
+                    <option value="risco">Risco com desenho</option>
+                </select>
+
+
                 <label for="barbeiro">Selecione um porfissional</label>
                 <select name="barbeiro" id="barbeiro">
                     <option value="barbeiro1">Francisco Almeida</option>
@@ -73,22 +84,22 @@
     </main>
 
     <script>
-  const form = document.getElementById('form-agendamento');
+        const form = document.getElementById('form-agendamento');
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault(); // Impede envio padrão
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Impede envio padrão
 
-    const formData = new FormData(form);
-    const dados = new URLSearchParams();
+            const formData = new FormData(form);
+            const dados = new URLSearchParams();
 
-    for (const [key, value] of formData.entries()) {
-      dados.append(key, value);
-    }
+            for (const [key, value] of formData.entries()) {
+                dados.append(key, value);
+            }
 
-    // Redireciona para revisar.html com os dados na URL
-    window.location.href = `./revisar.html?${dados.toString()}`;
-  });
-</script>
+            // Redireciona para revisar.html com os dados na URL
+            window.location.href = `./revisar.html?${dados.toString()}`;
+        });
+    </script>
 
 
 </body>
